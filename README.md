@@ -1,25 +1,59 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Laravel APi
+This API is created using Laravel API Resource.
 
-## About Laravel
+## Installation steps
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Follow the bellow steps to install and set up the application.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Step 1: Clone the Application**<br>
+You can download the ZIP file or git clone from my repo into your project  directory.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Step 2: Configure the Application**<br>
+After you clone the repo in to your project folder the project need to be set up by following commands-
+
+- In terminal go to your project directory and Run 
+    
+        composer install 
+    
+- Then copy the .env.example file to .env file in the project root folder
+
+- Edit the .env file and fill all required data for the bellow variables
+    
+        APP_URL=http://localhost //your application domain URL go here
+    
+        DB_HOST=127.0.0.1 // Your DB host IP. Here we are assumed it to be local host
+        DB_PORT=3306 //Port if you are using except the default
+        DB_DATABASE=name_of_your_database
+        DB_USERNAME=db_user_name
+        DB_PASSWORD=db_password
+    
+- To set the Application key run the bellow command in your terminal.
+    
+        php artisan key:generate
+    
+- Make your storage and bootstrapp folder writable by your application user.
+
+- Create all the necessary tables need for the application by runing the bellow command.
+    
+        php artisan migrate
+
+- Fill default data if your need by running bellow command.
+
+        php artisan db:seed
+
+Thats all! The application is configured now.
+
+### API EndPoints
+
+* Post GET All `http://localhost:8000/api/artigos`
+* Post GET Single `http://localhost:8000/api/artigo/{id}`
+* Post POST Create `http://localhost:8000/api/novo`
+* Post PUT Update `http://localhost:8000/api/atualizar/{id}`
+* Post DELETE destroy `http://localhost:8000/api/deleta/{id}`
+
+
 
 ## License
 
