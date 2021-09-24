@@ -1,9 +1,9 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-### Laravel APi 
+## Laravel APi 
 This API is created using Laravel API Resource.
 
-#### Installation steps 
+## Installation steps 
 
 Follow the bellow steps to install and set up the application.
 
@@ -45,7 +45,7 @@ After you clone the repo in to your project folder the project need to be set up
 
 Thats all! The application is configured now.
 
-### API EndPoints
+## API EndPoints
 
 * Post GET All `http://localhost:8000/api/artigos`
 * Post GET Single `http://localhost:8000/api/artigo/{id}`
